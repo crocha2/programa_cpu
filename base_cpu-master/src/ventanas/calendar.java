@@ -306,12 +306,12 @@ public final class calendar extends javax.swing.JFrame {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
 
         try {
-            imagen ima = new imagen(txtNombreImagen.getText(), this.fis, this.longitudBytes);
+            imagen ima = new imagen(Integer.parseInt(cmbImagen.getSelectedItem().toString()),this.fis, this.longitudBytes);
             //ima.setNombre(this.txtNombreImagen.getText());
             //ima.setImagen(this.fis);
             //ima.setImagen(this.longitudBytes);
 
-            dbEntrada.adjuntarImagen(ima);
+            dbEntrada.adjuntarImagenMOD(ima);
             JOptionPane.showMessageDialog(this, "Ingresado exitosamente");
             
             txtNombreImagen.setText("");

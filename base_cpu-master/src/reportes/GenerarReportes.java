@@ -182,7 +182,7 @@ public class GenerarReportes {
             Map parametro = new HashMap();
 
             //HAY QUE TRAER LA IMAGEN Y SU LONGITUD...
-            parametro.put("logo", this.getClass().getResourceAsStream("/imagenes/cpu_med.png"));
+            //parametro.put("image", this.getClass().getTypeParameters());
             parametro.put("id_imagen", id);
 
             JasperPrint j;
@@ -191,7 +191,7 @@ public class GenerarReportes {
             System.out.println("conectado correctamente");
 
             JasperViewer jv = new JasperViewer(j, false);
-            jv.setTitle("REPORTE - IMAGEN");
+            jv.setTitle("REPORTE");
             jv.setVisible(true);
             //jv.show();
             cn.close();

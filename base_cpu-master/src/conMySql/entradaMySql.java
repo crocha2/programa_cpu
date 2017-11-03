@@ -64,11 +64,11 @@ public class entradaMySql {
             }
             cn.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error en listado:\n"+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error en listado:\n" + ex.getMessage());
         }
         return entrada;
     }
-    
+
     public ArrayList<Entradas> ListEntradas_garantias() {
         ArrayList<Entradas> entrada = new ArrayList();
         try {
@@ -92,11 +92,11 @@ public class entradaMySql {
             }
             cn.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error en listado:\n"+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error en listado:\n" + ex.getMessage());
         }
         return entrada;
     }
-    
+
     public ArrayList<imagen> ListImagen() {
         ArrayList<imagen> ima = new ArrayList();
         try {
@@ -111,7 +111,7 @@ public class entradaMySql {
             }
             cn.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error en listado:\n"+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error en listado:\n" + ex.getMessage());
         }
         return ima;
     }
@@ -120,7 +120,7 @@ public class entradaMySql {
     public void insertarEntrada(Entradas entrada) {
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
-            PreparedStatement pst =  cn.prepareStatement("INSERT INTO entradas(numero, fecha, elemento, potencia, marca, modelo, serie, empresa, nit, persona_remite, ciudad, direccion, contacto, telefono, correo, motivo, parrilla, bases_plas, conector_ori, garantia, estado_car, observaciones, tarjeta, estado, id_cli) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            PreparedStatement pst = cn.prepareStatement("INSERT INTO entradas(numero, fecha, elemento, potencia, marca, modelo, serie, empresa, nit, persona_remite, ciudad, direccion, contacto, telefono, correo, motivo, parrilla, bases_plas, conector_ori, garantia, estado_car, observaciones, tarjeta, estado, id_cli) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             pst.setString(1, entrada.getNumero());
             pst.setString(2, entrada.getFecha());
             pst.setString(3, entrada.getElemento());
@@ -136,7 +136,7 @@ public class entradaMySql {
             pst.setString(13, entrada.getNombre_contacto());
             pst.setString(14, entrada.getTelefono_contacto());
             pst.setString(15, entrada.getCorreo());
-            pst.setString(16, entrada.getMotivo());   
+            pst.setString(16, entrada.getMotivo());
             pst.setString(17, entrada.getParrilla());
             pst.setString(18, entrada.getBases_plasticas());
             pst.setString(19, entrada.getConector_origi());
@@ -150,11 +150,10 @@ public class entradaMySql {
             JOptionPane.showMessageDialog(null, "Guardado exitosamente");
             cn.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al insertar:\n"+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al insertar:\n" + ex.getMessage());
         }
     }
 
-    
     public void EditarTablaEntrada(Entradas entrada) {
         try {
             //(FECHA, ELEMENTO, POTENCIA, MARCA, MODELO, SERIE, EMPRESA, NIT, PERSONA_REMITE, CIUDAD, DIRECCION, NOMBRE_CONTACTO, TELEFONO_CONTACTO, CORREO, MOTIVO, TARJETA_RED, PARRILLA, BASES_PLASTICAS, CONECTOR_ORIGI, GARANTIA, ESTADO_CARCASA, OBSERVACIONES)
@@ -178,10 +177,10 @@ public class entradaMySql {
             cn.close();
         } catch (SQLException ex) {
             Logger.getLogger(entradaMySql.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Error al editar:\n"+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al editar:\n" + ex.getMessage());
         }
     }
-    
+
     public void EditarEntrada(Entradas entrada) {
         try {
             //(FECHA, ELEMENTO, POTENCIA, MARCA, MODELO, SERIE, EMPRESA, NIT, PERSONA_REMITE, CIUDAD, DIRECCION, NOMBRE_CONTACTO, TELEFONO_CONTACTO, CORREO, MOTIVO, TARJETA_RED, PARRILLA, BASES_PLASTICAS, CONECTOR_ORIGI, GARANTIA, ESTADO_CARCASA, OBSERVACIONES)
@@ -215,10 +214,10 @@ public class entradaMySql {
             cn.close();
         } catch (SQLException ex) {
             Logger.getLogger(entradaMySql.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Error al editar:\n"+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al editar:\n" + ex.getMessage());
         }
     }
-    
+
     public void EditarClienteEnEntrada(clientes cli) {
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
@@ -235,11 +234,11 @@ public class entradaMySql {
             cn.close();
         } catch (SQLException ex) {
             Logger.getLogger(clienteMySql.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Error al editar:\n"+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al editar:\n" + ex.getMessage());
         }
 
     }
-    
+
     public void EliminarEntrada(Entradas en) {
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
@@ -251,24 +250,69 @@ public class entradaMySql {
             cn.close();
         } catch (SQLException ex) {
             Logger.getLogger(entradaMySql.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Error al eliminar:\n"+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al eliminar:\n" + ex.getMessage());
         }
     }
-    
-    public void adjuntarImagen(imagen img) {
+
+    public void adjuntarImagenINSERT(imagen img) {
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
             PreparedStatement pst = cn.prepareStatement("INSERT INTO imagen (nombre, image) VALUES (?,?)");
             pst.setString(1, img.getNombre());
-            pst.setBlob(2, img.getImagen(),img.getLongitud());
+            pst.setBlob(2, img.getImagen(), img.getLongitud());
             //pst.setInt(3, img.getLongitud());
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Guardado exitosamente");
             cn.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al insertar:\n"+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al insertar:\n" + ex.getMessage());
         }
     }
 
+    public void adjuntarImagenUPDATE(imagen img) {
+      
+        try {
+            Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
+            PreparedStatement pst = (PreparedStatement) cn.prepareStatement("UPDATE imagenes SET imagen = ? WHERE id_entra = ?");
+            pst.setBlob(1, img.getImagen(), img.getLongitud());
+            pst.setInt(2, img.getId_imagen());
+            pst.executeUpdate();
+            cn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(clienteMySql.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Error al editar:\n" + ex.getMessage());
+        }
+    }
+
+    public void adjuntarImagenMOD(imagen img) {
+        /*
+         try {
+         Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
+         PreparedStatement pst = cn.prepareStatement("INSERT INTO imagen (nombre, image) VALUES (?,?)");
+         pst.setString(1, img.getNombre());
+         pst.setBlob(2, img.getImagen(),img.getLongitud());
+         //pst.setInt(3, img.getLongitud());
+         pst.executeUpdate();
+         JOptionPane.showMessageDialog(null, "Guardado exitosamente");
+         cn.close();
+         } catch (SQLException ex) {
+         JOptionPane.showMessageDialog(null, "Error al insertar:\n"+ex.getMessage());
+         }
+        
+         */
+
+        try {
+            Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
+            PreparedStatement pst = (PreparedStatement) cn.prepareStatement("UPDATE imagen SET image = ? WHERE id_imagen = ?");
+            pst.setBlob(1, img.getImagen(), img.getLongitud());
+            pst.setInt(2, img.getId_imagen());
+            pst.executeUpdate();
+            cn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(clienteMySql.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Error al editar:\n" + ex.getMessage());
+        }
+
+    }
 
 }
