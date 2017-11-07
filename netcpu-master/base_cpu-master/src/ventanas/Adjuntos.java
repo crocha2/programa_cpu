@@ -5,18 +5,83 @@
  */
 package ventanas;
 
+import clasesPrincipales.Entradas;
+import clasesPrincipales.imagen;
+import conMySql.entradaMySql;
+import java.awt.Image;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Administrador
  */
 public class Adjuntos extends javax.swing.JFrame {
 
+    private FileInputStream fis;
+    private int longitudBytes;
+
+    ArrayList<Entradas> entrada;
+    entradaMySql dbEntrada = new entradaMySql();
+
     /**
      * Creates new form Adjuntos
      */
     public Adjuntos() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+        this.setTitle("CPU System Service S.A.S - ADJUNTAR");
+        CargarCmbEntrada();
+        txtIdEntrada.setEnabled(false);
+        txtCliente.setEnabled(false);
+        txtFecha.setEnabled(false);
+        txtModelo.setEnabled(false);
+        txtSerie.setEnabled(false);
+        
+        btnSeleccionar.setVisible(false);
+        btnGuardar.setVisible(false);
+        lblFoto.setVisible(false);
     }
+
+    public void CargarCmbEntrada() {
+        try {
+            Connection cnx = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery("SELECT numero FROM entradas ORDER BY numero DESC");
+            while (rs.next()) {
+                this.cmbEntradas.addItem(rs.getString("numero"));
+            }
+        } catch (Exception e) {
+        }
+    }
+
+    public void limpiar() {
+        txtIdEntrada.setText("");
+        txtCliente.setText("");
+        txtFecha.setText("");
+        txtModelo.setText("");
+        txtSerie.setText("");
+        lblFoto.setText(null);
+    }
+    
+    public void habilitar() {
+        btnSeleccionar.setVisible(true);
+        btnGuardar.setVisible(true);
+        lblFoto.setVisible(true);
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,8 +95,22 @@ public class Adjuntos extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
-        btnEntrada = new javax.swing.JButton();
-        btnSalida = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        txtCliente = new javax.swing.JTextField();
+        cmbEntradas = new javax.swing.JComboBox();
+        btnBusca = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        txtIdEntrada = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        txtSerie = new javax.swing.JTextField();
+        txtModelo = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        btnGuardar = new javax.swing.JButton();
+        txtFecha = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        lblFoto = new javax.swing.JLabel();
+        btnSeleccionar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -40,81 +119,234 @@ public class Adjuntos extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("DATOS ADJUNTOS");
+        jLabel2.setText("ADJUNTAR ENTRADA");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(10, 11, 220, 29);
+        jLabel2.setBounds(10, 11, 280, 29);
         jPanel2.add(jSeparator7);
-        jSeparator7.setBounds(10, 41, 220, 10);
+        jSeparator7.setBounds(10, 41, 420, 10);
 
-        btnEntrada.setBackground(new java.awt.Color(255, 255, 255));
-        btnEntrada.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnEntrada.setForeground(new java.awt.Color(255, 255, 255));
-        btnEntrada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/entrad.png"))); // NOI18N
-        btnEntrada.setText("ENTRADA");
-        btnEntrada.setBorder(null);
-        btnEntrada.setBorderPainted(false);
-        btnEntrada.setContentAreaFilled(false);
-        btnEntrada.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnEntrada.setIconTextGap(-1);
-        btnEntrada.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnEntrada.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnEntrada.addActionListener(new java.awt.event.ActionListener() {
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Fecha");
+        jPanel2.add(jLabel13);
+        jLabel13.setBounds(290, 60, 60, 14);
+        jPanel2.add(txtCliente);
+        txtCliente.setBounds(30, 140, 290, 30);
+
+        cmbEntradas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEntradaActionPerformed(evt);
+                cmbEntradasActionPerformed(evt);
             }
         });
-        jPanel2.add(btnEntrada);
-        btnEntrada.setBounds(40, 70, 65, 77);
+        jPanel2.add(cmbEntradas);
+        cmbEntradas.setBounds(30, 80, 160, 30);
 
-        btnSalida.setBackground(new java.awt.Color(255, 255, 255));
-        btnSalida.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnSalida.setForeground(new java.awt.Color(255, 255, 255));
-        btnSalida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salid.png"))); // NOI18N
-        btnSalida.setText("SALIDA");
-        btnSalida.setBorder(null);
-        btnSalida.setBorderPainted(false);
-        btnSalida.setContentAreaFilled(false);
-        btnSalida.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnSalida.setIconTextGap(-1);
-        btnSalida.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnSalida.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnSalida.addActionListener(new java.awt.event.ActionListener() {
+        btnBusca.setBackground(new java.awt.Color(255, 255, 255));
+        btnBusca.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnBusca.setForeground(new java.awt.Color(255, 255, 255));
+        btnBusca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lupa2.png"))); // NOI18N
+        btnBusca.setBorder(null);
+        btnBusca.setBorderPainted(false);
+        btnBusca.setContentAreaFilled(false);
+        btnBusca.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnBusca.setIconTextGap(-1);
+        btnBusca.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnBusca.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnBusca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalidaActionPerformed(evt);
+                btnBuscaActionPerformed(evt);
             }
         });
-        jPanel2.add(btnSalida);
-        btnSalida.setBounds(140, 70, 65, 77);
+        jPanel2.add(btnBusca);
+        btnBusca.setBounds(200, 70, 33, 33);
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("ID");
+        jPanel2.add(jLabel14);
+        jLabel14.setBounds(350, 120, 60, 14);
+        jPanel2.add(txtIdEntrada);
+        txtIdEntrada.setBounds(350, 140, 70, 30);
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("SERIE");
+        jPanel2.add(jLabel15);
+        jLabel15.setBounds(240, 180, 60, 14);
+        jPanel2.add(txtSerie);
+        txtSerie.setBounds(240, 200, 180, 30);
+        jPanel2.add(txtModelo);
+        txtModelo.setBounds(30, 200, 180, 30);
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("CLIENTE");
+        jPanel2.add(jLabel16);
+        jLabel16.setBounds(30, 120, 60, 14);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("MODELO");
+        jPanel2.add(jLabel17);
+        jLabel17.setBounds(30, 180, 60, 14);
+
+        btnGuardar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnGuardar.setText("GUARDAR");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnGuardar);
+        btnGuardar.setBounds(300, 300, 120, 40);
+        jPanel2.add(txtFecha);
+        txtFecha.setBounds(290, 80, 130, 30);
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("ENTRADAS");
+        jPanel2.add(jLabel18);
+        jLabel18.setBounds(30, 60, 60, 14);
+
+        lblFoto.setBackground(new java.awt.Color(204, 204, 204));
+        lblFoto.setForeground(new java.awt.Color(204, 204, 204));
+        lblFoto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblFoto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblFotoMouseClicked(evt);
+            }
+        });
+        jPanel2.add(lblFoto);
+        lblFoto.setBounds(30, 260, 260, 240);
+
+        btnSeleccionar.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        btnSeleccionar.setText("Seleccionar...");
+        btnSeleccionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSeleccionarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnSeleccionar);
+        btnSeleccionar.setBounds(300, 260, 120, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntradaActionPerformed
+    private void cmbEntradasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbEntradasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbEntradasActionPerformed
 
-        Entrada obj = new Entrada();
-        obj.setVisible(true);
+    private void btnBuscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscaActionPerformed
+
+        //(FECHA, ELEMENTO, POTENCIA, MARCA, MODELO, SERIE, EMPRESA, NIT, PERSONA_REMITE, CIUDAD, DIRECCION, NOMBRE_CONTACTO, TELEFONO_CONTACTO, CORREO, MOTIVO, TARJETA_RED, PARRILLA, BASES_PLASTICAS, CONECTOR_ORIGI, GARANTIA, ESTADO_CARCASA, OBSERVACIONES)
+        try {
+
+            String guardar = cmbEntradas.getSelectedItem().toString();
+            Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
+            Statement st = cn.createStatement();
+            //PreparedStatement pst = cn.prepareStatement("SELECT numero, fecha, elemento, potencia, marca, modelo, serie, empresa, nit, persona_remite, ciudad, direccion, contacto, telefono, correo, motivo, parrilla, bases_plas, conector_ori, garantia, estado_car, observaciones, tarjeta FROM entradas where numero = ? ORDER BY 2");
+            PreparedStatement pst = cn.prepareStatement("Select * from entradas where numero = ?");
+            pst.setString(1, guardar);
+            //pst.setString(1, CMBID.getName());
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+
+                txtFecha.setText(rs.getString("fecha").trim());
+                txtCliente.setText(rs.getString("empresa").trim());
+                txtModelo.setText(rs.getString("modelo").trim());
+                txtSerie.setText(rs.getString("serie").trim());
+                txtIdEntrada.setText(rs.getString("id_cli"));
+                habilitar();
+
+                //pst.setString(1, CMBID.getName());
+                //String guardar = txtBuscar.getText();
+            } else {
+                JOptionPane.showMessageDialog(null, "No existe la remision");
+            }
+            cn.close();
+            st.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "error:" + ex.getMessage());
+        }
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEntradaActionPerformed
+    }//GEN-LAST:event_btnBuscaActionPerformed
 
-    private void btnSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalidaActionPerformed
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
 
-        Salidass obj = new Salidass();
-        obj.setVisible(true);
+        if (txtIdEntrada.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Debes seleccionar un registro ENTRADAS");
+        } else {
+            try {
+                imagen ima = new imagen(Integer.parseInt(txtIdEntrada.getText()), this.fis, this.longitudBytes);
+            //ima.setNombre(this.txtNombreImagen.getText());
+                //ima.setImagen(this.fis);
+                //ima.setImagen(this.longitudBytes);
+
+                dbEntrada.adjuntarImagenMOD(ima);
+                JOptionPane.showMessageDialog(this, "Ingresado exitosamente");
+                limpiar();
+
+            } catch (Exception e) {
+                System.err.println("error" + e);
+            }
+        }
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSalidaActionPerformed
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void lblFotoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblFotoMouseClicked
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblFotoMouseClicked
+
+    private void btnSeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarActionPerformed
+
+        if (txtIdEntrada.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Debes seleccionar un registro ENTRADAS");
+        } else {
+
+            JFileChooser se = new JFileChooser();
+            se.setFileSelectionMode(JFileChooser.FILES_ONLY); // seleccionar solo archivos..
+            int estado = se.showOpenDialog(null);// mostrar el cuadro de archivo..
+            if (estado == JFileChooser.APPROVE_OPTION) { // si el usuario selecciono el archivo y dio ACEPTAR..
+                try {
+                    fis = new FileInputStream(se.getSelectedFile());
+                    this.longitudBytes = (int) se.getSelectedFile().length();
+
+                //Dimenciona la imagen a la dimencion del label "lblFoto"
+                /*
+                     Image icono = ImageIO.read(se.getSelectedFile()).getScaledInstance(lblFoto.getWidth(), lblFoto.getHeight(), Image.SCALE_DEFAULT);
+                     lblFoto.setIcon(new ImageIcon(icono));
+                     lblFoto.updateUI();
+                     */
+                    Image icono = ImageIO.read(se.getSelectedFile()).getScaledInstance(lblFoto.getWidth(), lblFoto.getHeight(), Image.SCALE_DEFAULT);
+                    lblFoto.setIcon(new ImageIcon(icono));
+                    lblFoto.updateUI();
+
+                } catch (Exception e) {
+                    System.out.println("error" + e);
+                }
+            }
+        }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSeleccionarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,10 +384,24 @@ public class Adjuntos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEntrada;
-    private javax.swing.JButton btnSalida;
+    private javax.swing.JButton btnBusca;
+    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnSeleccionar;
+    private javax.swing.JComboBox cmbEntradas;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JLabel lblFoto;
+    private javax.swing.JTextField txtCliente;
+    private javax.swing.JTextField txtFecha;
+    private javax.swing.JTextField txtIdEntrada;
+    private javax.swing.JTextField txtModelo;
+    private javax.swing.JTextField txtSerie;
     // End of variables declaration//GEN-END:variables
 }
