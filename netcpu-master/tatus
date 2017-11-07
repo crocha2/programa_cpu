@@ -1,0 +1,720 @@
+[33mcommit 51e2acd29129c91f638aea668208d95726bc8ca7[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri May 26 11:07:44 2017 -0500
+
+    reportes conectados a base de datos de dominio web
+
+[33mcommit 7b498f538e26206704fdd8bbe8532afea2a29078[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri May 26 11:03:28 2017 -0500
+
+    conectado a la base de datos del dominio.. web
+
+[33mcommit 36670c619978f60d67ed0fb36bfb456c51decf42[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu May 25 17:47:36 2017 -0500
+
+    Listar clientes en orden alfabetico
+
+[33mcommit d5cc715f3fbc07e3c4fc9146363d7e7d67a5b30b[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu May 18 18:06:39 2017 -0500
+
+    insertando clientes
+
+[33mcommit 405b889c27be4755eb7c954857c261457fa37307[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu May 18 12:05:06 2017 -0500
+
+    reporte entrada editado persona_remite
+
+[33mcommit 086de5a214d375c4d25994e90eca94f418b74eb0[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu May 18 10:42:01 2017 -0500
+
+    actualizado
+
+[33mcommit 4ebfa570df0678e61d43a7e1d879265bc3225b4c[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu May 18 10:29:13 2017 -0500
+
+    Buscar con autoCompleter implementado
+
+[33mcommit 1765c98aee1d3476d335c3b78d9beea43059709d[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed May 17 10:03:53 2017 -0500
+
+    corregido
+
+[33mcommit 6ed3ba2d109f4416f1f8a63a7be2a7019b3854ae[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue May 16 17:26:37 2017 -0500
+
+    reportes implementados en entradas, salidas y envios
+
+[33mcommit ad0b3b1a58f15eb38463bd152ba4a7b6e1c33d0d[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue May 16 13:13:15 2017 -0500
+
+    reporte de entrada implementado
+
+[33mcommit 5acc89b8e63d39b1aab43cffce2e4fae6ee3a807[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue May 16 12:03:13 2017 -0500
+
+    implementando reportes de entrada
+
+[33mcommit 87bc448a5a587af08ecc7f2faa5ef1fc6ad589d7[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue May 16 10:18:02 2017 -0500
+
+    Reporte Salida implementado
+
+[33mcommit 851dd394f00eeece3e392c3fbaf7004cda72f7b2[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue May 16 09:53:22 2017 -0500
+
+    implementando el reporte salida
+
+[33mcommit cefd0e040a96f74a59ded90da3466965a6ff658d[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon May 15 17:44:23 2017 -0500
+
+    fin por hoy
+
+[33mcommit c49699aada8a5e2248323275225a4b30902b1376[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon May 15 10:37:22 2017 -0500
+
+    trabajando
+
+[33mcommit cb4a94d652eb532f78a75fe2f96ea18cf9d15bb4[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon May 15 10:25:11 2017 -0500
+
+    envio y factura_envio terminado
+
+[33mcommit 8adf4311e2fa45df283f65cd1c91de34b31b1c7f[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri May 12 17:19:20 2017 -0500
+
+    terminado por hoy
+
+[33mcommit d7139dda9afce6f6291f9ec4124622a3eab7c61d[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri May 12 14:18:45 2017 -0500
+
+    editando detalles
+
+[33mcommit 877c5dc794185bffbe6bcbb536a6aa912990bfad[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri May 12 11:44:20 2017 -0500
+
+    insertar en envios terminado
+
+[33mcommit 91b82e3dca20e8100aeb2df57df11c4aa328a53f[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri May 12 10:15:45 2017 -0500
+
+    salidass terminada y facturas salida
+
+[33mcommit e460290000bcf7ac1c60d237814b5310548ee12b[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri May 12 09:24:08 2017 -0500
+
+    comienzo
+
+[33mcommit b59ecfecde484a3083dd0b4491aaacc7fea40fc6[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu May 11 17:40:31 2017 -0500
+
+    pendiente
+
+[33mcommit e19ae079147553f8acd7c871eec3e77fdf16ef03[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu May 11 15:48:53 2017 -0500
+
+    Facturas_Entrada_oper listo
+
+[33mcommit 90418170d1aca845fce4c23a7426b9914dd7a5b5[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu May 11 15:24:05 2017 -0500
+
+    secuencia de numeros terminado en interfaz entrada
+
+[33mcommit bb7253aa285aca1e0677d227c6cccb164797054c[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu May 11 12:13:16 2017 -0500
+
+    trabajando en serie de numeros
+
+[33mcommit b503ddcadf9c313b3e83106b83e562498a2057a2[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed May 10 17:50:43 2017 -0500
+
+    trabajando en secuencia de numeros
+
+[33mcommit c0464278e1c794335b83b17257bcabcc3401a303[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed May 10 12:08:44 2017 -0500
+
+    falta corregir
+
+[33mcommit 3c2ca87fae42f9a088422d035048f5de44e03907[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed May 10 11:15:44 2017 -0500
+
+    conexiones terminadas
+
+[33mcommit e67fe11072ff0b796daa9c2c421d5d90dfa2ca4f[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed May 10 11:09:33 2017 -0500
+
+    conexiones cerradas
+
+[33mcommit 8294468b1e36f224b0c38db0a63a76fb5939853a[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed May 10 10:47:59 2017 -0500
+
+    secuencia de entradas terminada e implementada
+
+[33mcommit 64b9bab0a7429c6e20b05916c16874e8468c317a[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue May 9 17:48:45 2017 -0500
+
+    secuencia de numeros en construccion
+
+[33mcommit 53a2a8b86c7d90db8ffc040ed5c0d11f30a19722[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue May 9 11:57:24 2017 -0500
+
+    aplicacion depurada
+
+[33mcommit 58542721ba28e61ed31d864e498f430e32968bb1[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue May 9 11:24:00 2017 -0500
+
+    clientes y usuarios implementados en MySql
+
+[33mcommit 576a53ca45f8e64bacdcc286746aa30bc00ab7f9[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon May 8 17:47:43 2017 -0500
+
+    fin primera parte MySql
+
+[33mcommit 1e48dfef2df805abe4c1a7c80475bf044e5b7a3f[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon May 8 17:43:20 2017 -0500
+
+    insertar, listar implementados con MySql
+
+[33mcommit 10bd4bab3b7e8804416706f9eecae0382f013613[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon May 8 17:07:30 2017 -0500
+
+    Implementando el proyecto en MySql
+
+[33mcommit 98c0de741aa9e89802c930a8dad2876c94c39224[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon May 8 14:12:14 2017 -0500
+
+    no_rem implementando
+
+[33mcommit b1037ef5237beee53f886181382458e03a416385[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon May 8 11:11:45 2017 -0500
+
+    formato fechas yyyy/mm/dd
+
+[33mcommit de78534d679d247d8fa2fa71ac47b1291880adf6[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 18 08:26:01 2017 -0500
+
+    tabla_clientes_admin modificada 2
+
+[33mcommit 44898a1688881622ed07a5add3cc96fc2c04ac0f[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 18 08:22:32 2017 -0500
+
+    tabla_clientes_admin modificada
+
+[33mcommit 86c0465288ad83e58f09c489fd9035bb569e2904[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Apr 7 17:46:15 2017 -0500
+
+    clase envioDB creada
+
+[33mcommit 782989f12783f85028f5489ec2fb13a6ba5720ee[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Apr 7 16:34:21 2017 -0500
+
+    botones SALIR direccionan a BIENVENIDO
+
+[33mcommit cb530035a4ee8be19f48db774e93f13413a9a953[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Apr 7 11:51:57 2017 -0500
+
+    clase envios creada
+
+[33mcommit 46816d67eb02ddde166be290c57863a8bece2c99[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Apr 7 11:25:04 2017 -0500
+
+    Interfaces de operador creados
+
+[33mcommit 422849a7a7943a339b8678f7c3f31a227e59fba3[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Apr 7 10:51:21 2017 -0500
+
+    botones editer y eliminar implementados en FACTURAS_SALIDA
+
+[33mcommit 78c03e7dfd28606528adc1b622e78eb23969eb32[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Apr 7 10:11:49 2017 -0500
+
+    combobox implementados en FACTURAS_SALIDA
+
+[33mcommit 3ff77929896e2dee5f6916be6c58e8c834ef11ca[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Apr 7 09:46:37 2017 -0500
+
+    boton guardar en salida incorporado
+
+[33mcommit 7b83b66bd2d4089b5cd52868cd35fa1907d48e41[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Apr 7 08:31:32 2017 -0500
+
+    inicio trabajo en salidass
+
+[33mcommit 627a14315195c471f0bb4848d4148726ecc4ff51[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Apr 6 17:47:10 2017 -0500
+
+    salida falta por terminar
+
+[33mcommit 52eae7d50fa7d07ede9f23796fce5a2a45f89c52[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Apr 6 17:32:15 2017 -0500
+
+    construyendo la clase SALIDA
+
+[33mcommit 6f8f082c6b0115ce46755aebd6aa06862280ae75[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Apr 6 16:46:20 2017 -0500
+
+    se creo la clase salidas
+
+[33mcommit 107db1f418ba0c0d35a15af60d18deae9455656c[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Apr 6 15:56:52 2017 -0500
+
+    botones terminados
+
+[33mcommit 1627a69d5f96a18a2ea8de0514dfaa4d4fe8404a[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Apr 6 12:01:33 2017 -0500
+
+    botones principal en contruccion
+
+[33mcommit 3164cbf4337f5cf32a25d1602d6d354df5664e57[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Apr 6 11:11:29 2017 -0500
+
+    botones en contruccion
+
+[33mcommit 3a62ec90b33adba1f9760ae745f6eeeb1e2fe8bc[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Apr 6 08:23:55 2017 -0500
+
+    botones EDITAR_CLIENTE listos
+
+[33mcommit 06a7111c71eb1e064e7fd8288ab4cbf751398249[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Apr 5 17:52:04 2017 -0500
+
+    botones EDITAR_CLIENTE listos
+
+[33mcommit c24285e2a0a569c737c7cece8cd822c212b9ec00[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Apr 5 16:27:03 2017 -0500
+
+    botones listos en NUEVO_CLIENTE
+
+[33mcommit 7a4eb30649ef3536d0316feb604020de71db2f65[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Apr 5 11:25:53 2017 -0500
+
+    FACTURAS DE ENTRADA terminada 2
+
+[33mcommit 493d8b00e02ffd35ff1345b5189419fb338e81a4[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Apr 5 11:17:05 2017 -0500
+
+    FACTURAS DE ENTRADA terminada
+
+[33mcommit 2a98a7ab36c5f9d54101b187b8a396965bb3fda0[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Apr 5 08:40:52 2017 -0500
+
+    entrada terminado
+
+[33mcommit 683e02cf2f48b1c7cd70d744aabca39badc7de4a[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Apr 5 08:28:27 2017 -0500
+
+    se agrego el boton start para habilitar EDITAR y ELIMINAR en FACTURAS_ENTRADA
+
+[33mcommit 633f68bd33c215801c0a19a273a3a57a432c326c[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 4 16:51:32 2017 -0500
+
+    version 2.2
+
+[33mcommit ecefc8e65fae4c21281a1d51337275b68c5d1110[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 4 16:40:03 2017 -0500
+
+    condicion de TextField vacios implementado
+
+[33mcommit 0a114a7e3379aa797b8f2d17784f827626cae69a[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 4 15:43:12 2017 -0500
+
+    Boton eliminar implementado en FACTURAS_ENTRADA
+
+[33mcommit 9e2fefedc83f358e64eb47e14a3dc025ee2bb33c[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 4 15:17:15 2017 -0500
+
+    boton editar terminado en FACTURAS_ENTRADA
+
+[33mcommit 5eebaab0f29cbb8141ae7743aeb887c67db0c25f[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 4 12:09:07 2017 -0500
+
+    boton EDITAR en construccion en FACTURAS_ENTRADA
+
+[33mcommit 531d4173250ffa4d10eedccf4b72071499226924[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 4 11:52:20 2017 -0500
+
+    se implemento la clase facturas entrada
+
+[33mcommit 4f456260fb30c1b7e4c6a328059c058c9d2f1f33[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 4 10:40:19 2017 -0500
+
+    boton guardar implementado en entrada
+
+[33mcommit 41a27b04e9b4837b84c7ed0954324e5f4bad5afd[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 4 09:54:23 2017 -0500
+
+    metodo insertar entrada en construccion
+
+[33mcommit 195db1c796b0ade4ff7857172e6b54c57f88843e[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 4 09:16:12 2017 -0500
+
+    metodo insertarEntrada creado
+
+[33mcommit dde7a1c9bf8128ee11a66e91f440d5e4c81aa9bb[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 4 08:56:47 2017 -0500
+
+    se agrego la clase entradaDB
+
+[33mcommit 23a5a13e40a8f27e8ad408e75750431c0b8c10a5[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Apr 4 08:27:32 2017 -0500
+
+    comienzo version 2.1
+
+[33mcommit c6559aa4fc41a7aec7c144d2e5d1676934e659b8[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon Apr 3 17:33:44 2017 -0500
+
+    version 2.1
+
+[33mcommit 8e0f5fd0b8ccebb9b6a0c093a3ed9e9f36357e6e[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon Apr 3 17:13:49 2017 -0500
+
+    version 2.1
+
+[33mcommit ece5410ebf6b04decdcca8054d448cc1a6b4853d[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon Apr 3 16:36:35 2017 -0500
+
+    ¿seguro? implementado
+
+[33mcommit 715b63e66845fe2ea15c100824e9629f17fc09ef[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon Apr 3 15:02:44 2017 -0500
+
+    creacion de la clase ENTRADA en CLASESPRINCIPALES
+
+[33mcommit 550c5c1184e1d1b475abf0044e4677dd50e981ba[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon Apr 3 14:26:31 2017 -0500
+
+    deshabilitados los TEXTFIELD
+
+[33mcommit b2b9f472271b18980808b808db1f598d5ef61ca9[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon Apr 3 12:02:53 2017 -0500
+
+    ID implementado en USUARIOS - falta codear el boton BUSCAR
+
+[33mcommit 33ddd3e5b875c44179c6c2021c8a1451cfe0dacf[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon Apr 3 11:24:56 2017 -0500
+
+    Se implemento el ID en EDITARCLIENTES y en la tabla
+
+[33mcommit 9f3d1f6811f993c2eeadf7d7ebb8b3b0770d5d36[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon Apr 3 11:10:52 2017 -0500
+
+    Se implemento el ID en las tablas para ELIMINARCLIENTES
+
+[33mcommit d163b7ea7eac2fb6520d8711cc56c55f26816964[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon Apr 3 10:08:15 2017 -0500
+
+    ERROR solucionado ELIMINAR y EDITAR
+
+[33mcommit d76dfe69be7f78bfd822076114f011f882e226a1[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon Apr 3 09:34:00 2017 -0500
+
+    ERROR en ELIMINAR y EDITAR
+
+[33mcommit 10376840273c0511c5b490378d5b17d064e3cc60[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Mar 31 10:55:22 2017 -0500
+
+    REFRESH
+
+[33mcommit 0760078da3da94336174c70381e80f24112298c7[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Mar 31 10:51:39 2017 -0500
+
+    botones PDF y GUARDAR implementados en ENTRADAS SALIDAS ENVIOS
+
+[33mcommit 2b5ff8153e38ad89fcdd34b80ab7bc61d4e4123b[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Mar 31 10:14:24 2017 -0500
+
+    Ventana ENTRADA editada con espacio para adjuntar
+
+[33mcommit 99351eb1d8c51343f3d10c82bf74eaa0cefb9e2f[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Mar 30 16:16:07 2017 -0500
+
+    SELAIDA editada
+
+[33mcommit 6ce3386a72cbb0f040a87c4b8fab9ce68aa00872[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Mar 30 15:28:45 2017 -0500
+
+    ENVIOS y SALIDA editados
+
+[33mcommit fa14333ff720b3dbceeb1b530eee470a883e2781[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Mar 30 15:13:43 2017 -0500
+
+    ENTRADA editado
+
+[33mcommit 8987e56d5b228b4ba86e0ab97031d4bfb6c2706a[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Mar 30 14:43:19 2017 -0500
+
+    Eliminar usuario y Eliminar cliente editados
+
+[33mcommit 89d14297d90c5d98545df1f429c5c216db54a28f[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Mar 30 14:33:57 2017 -0500
+
+    Etiqueta de salida modificado
+
+[33mcommit 484dabc0e317eae4b5846b76581c2559465314aa[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Mar 30 09:47:50 2017 -0500
+
+    interfaz 2.0
+
+[33mcommit 585b6d3eebc4c988f0edade563b43bb4a4280861[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Mar 30 09:04:03 2017 -0500
+
+    interfaz USUARIOS y NUEVO_USUARIO listos
+
+[33mcommit 47b24f35783646458ac34937866372fd8e0c1dc6[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Thu Mar 30 08:45:45 2017 -0500
+
+    Boton EDITAS en USUARIOS listo
+
+[33mcommit c06179fb7acb6d37956cb40e76a4df08d8984fd9[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 17:56:39 2017 -0500
+
+    Falta validar el Boton EDITAR del JFrame USUARIOS
+
+[33mcommit 3b280bbebfaa3b415597c8f7c9b37d696888e828[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 17:44:50 2017 -0500
+
+    Principal conectada con Usuarios
+
+[33mcommit d187e27a5ac4ced797dfc65dab4b49f693daebf2[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 17:36:52 2017 -0500
+
+    ELIMINAR implementado en interfaz USUARIOS
+
+[33mcommit 4982b9210401180f78aa3c8e7cc97724cc728c7a[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 17:12:16 2017 -0500
+
+    interfaz USUARIOS modificado con tres TextField
+
+[33mcommit d2b7f0ef4523da19dcf7ad5c30f8393524cc9dca[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 16:58:57 2017 -0500
+
+    configurado el Buscar y Listar en el JFrame USUARIOS
+
+[33mcommit 39a7600887a41d352c385d1a6547bdf1051fa945[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 16:25:52 2017 -0500
+
+    Interfaz_Admin corregida
+
+[33mcommit dde6465e3b05216fb139eee8cd8a740838fa491c[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 16:20:17 2017 -0500
+
+    Se configuro la Interfaz_Admin corregido para clase usuarios
+
+[33mcommit 86477686c8ab9d79e2a19a839bad2cbc2974ad1f[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 15:51:53 2017 -0500
+
+    Se configuro la Interfaz_Admin para que ingresaran por tipo_Uduarios
+
+[33mcommit cee74ae3fb2f0a3488983ab393efeb37e42973dc[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 10:41:26 2017 -0500
+
+    ENTRADA_OPER
+
+[33mcommit 369c2196a57d28ec8a2ebc5891b508dd860467fd[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 10:30:13 2017 -0500
+
+    se agrego TABLA CLIENTES OPER
+
+[33mcommit f23c0f8509114b16a1669bc7cc8c9ec888fd1bcd[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 10:22:19 2017 -0500
+
+    se agrego la ventana NUEVO CLIENTE OPER
+
+[33mcommit b013105cae0698a8257c319bb1b6e44a3786e827[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Wed Mar 29 10:17:12 2017 -0500
+
+    corregido error de ventanas FORMATOS OPER
+
+[33mcommit 8951a4206ecedd16f6e7bd82ba665987fb471095[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 28 17:28:46 2017 -0500
+
+    JFrame eliminar modificado
+
+[33mcommit cdfb2fd7e4ae1bcbf44ad540555d66dfb3f687eb[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 28 11:38:27 2017 -0500
+
+    nuevo usuario intento 2
+
+[33mcommit 1ee7e480ce6b6217ea90c84c78a7138a2f375e14[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 28 11:19:42 2017 -0500
+
+    nuevo usuario intento 1
+
+[33mcommit 6fa6c2d8782b66cdf96024d72f3baa482b001b76[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Mon Mar 27 17:42:29 2017 -0500
+
+    Mayusculas en los TextField
+
+[33mcommit 95a9155184dd10575b63193c6c32fa65067c7abd[m
+Merge: 25e1f00 6450162
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Mar 24 15:50:14 2017 -0500
+
+    Merge branch 'test'
+
+[33mcommit 25e1f00c7b86a12fb57303da941485849c9c8d9d[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Fri Mar 24 15:47:05 2017 -0500
+
+    Segundo
+
+[33mcommit 6450162d57f2b88fee3ae4760f415628c504b058[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 21 17:24:50 2017 -0500
+
+    guardar y descartar usuarios
+
+[33mcommit 67e8dbe6e5075598745f620e21bd532ba97386e3[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 21 16:12:43 2017 -0500
+
+    usuarios
+
+[33mcommit a1efd899334571196653b75702c8d4114cb82d69[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 21 11:43:08 2017 -0500
+
+    se agrego el jframe envios
+
+[33mcommit f6466a0924008581619b79958fc3690e85883a4c[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 21 11:16:23 2017 -0500
+
+    se agrego buscar en tablas eliminar y editar
+
+[33mcommit 514fef9db5fa470b3b3bf016441d7cc08c66df6a[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 21 10:55:42 2017 -0500
+
+    se agrego el boton buscar en tabla clientes
+
+[33mcommit 3b733db227f77daefb7a3e6e9d56aeb71e4b3462[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 21 09:52:55 2017 -0500
+
+    Se agrego el boton descartar en entrada y salida
+
+[33mcommit f90f243e78aff7bb4c15ae3b34d000ca2c074dd2[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 21 08:55:19 2017 -0500
+
+    Se implemento buscar en entradas
+
+[33mcommit 5c5d292122d6ec8e6f49096ba7b59b453e97ae79[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 7 17:00:33 2017 -0500
+
+    JOPtion yes no in
+
+[33mcommit 030f9954fb81ced9d95026d86ef921e6273ba103[m
+Author: carlos_rocha <crocha2@cuc.edu.co>
+Date:   Tue Mar 7 16:14:49 2017 -0500
+
+    Inicio
