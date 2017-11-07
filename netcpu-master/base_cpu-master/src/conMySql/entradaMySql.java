@@ -275,7 +275,7 @@ public class entradaMySql {
             Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
             PreparedStatement pst = (PreparedStatement) cn.prepareStatement("UPDATE imagenes SET imagen = ? WHERE id_entra = ?");
             pst.setBlob(1, img.getImagen(), img.getLongitud());
-            pst.setInt(2, img.getId_imagen());
+            pst.setInt(2, img.getId_entra());
             pst.executeUpdate();
             cn.close();
         } catch (SQLException ex) {
@@ -303,7 +303,7 @@ public class entradaMySql {
 
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
-            PreparedStatement pst = (PreparedStatement) cn.prepareStatement("UPDATE imagen SET image = ? WHERE id_imagen = ?");
+            PreparedStatement pst = (PreparedStatement) cn.prepareStatement("UPDATE imagenes SET imagen = ? WHERE id_imagen = ?");
             pst.setBlob(1, img.getImagen(), img.getLongitud());
             pst.setInt(2, img.getId_imagen());
             pst.executeUpdate();

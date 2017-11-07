@@ -119,7 +119,7 @@ public class Principal_Oper extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setForeground(new java.awt.Color(0, 153, 51));
         jLabel2.setText("Principal");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(490, 20, 220, 50);
@@ -303,7 +303,7 @@ public class Principal_Oper extends javax.swing.JFrame {
 
     private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
 
-        Tecnico obj = new Tecnico();
+        Tecnico_Oper obj = new Tecnico_Oper ();
         obj.setVisible(true);
 
         // TODO add your handling code here:
