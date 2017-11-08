@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
-	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
-	<parameter name="imagen_completa" class="java.io.InputStream"/>
-	<parameter name="id_imagen" class="java.lang.Integer">
+	<property name="ireport.y" value="6"/>
+	<parameter name="id_salida" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_salid" class="java.lang.Integer">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[SELECT image FROM imagen WHERE id_imagen = $P{id_imagen}]]>
+		<![CDATA[SELECT imagen FROM imagenes_salidas WHERE id_salida = $P{id_salid}]]>
 	</queryString>
-	<field name="image" class="java.io.InputStream"/>
+	<field name="imagen" class="java.io.InputStream"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -24,10 +26,10 @@
 		<band splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="621" splitType="Stretch">
+		<band height="629" splitType="Stretch">
 			<image>
-				<reportElement x="0" y="0" width="555" height="621"/>
-				<imageExpression class="java.io.InputStream"><![CDATA[$F{image}]]></imageExpression>
+				<reportElement x="0" y="0" width="555" height="629"/>
+				<imageExpression class="java.io.InputStream"><![CDATA[$F{imagen}]]></imageExpression>
 			</image>
 		</band>
 	</detail>

@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
  *
  * @author CPU_SYS
  */
-public class Principal_Admin extends javax.swing.JFrame {
+public class Principal_Oper extends javax.swing.JFrame {
 
     ArrayList<Entradas> entrada;
     entradaMySql dbEntrada = new entradaMySql();
@@ -29,7 +29,7 @@ public class Principal_Admin extends javax.swing.JFrame {
     /**
      * Creates new form Principal
      */
-    public Principal_Admin() {
+    public Principal_Oper() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
@@ -83,8 +83,6 @@ public class Principal_Admin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnNuevoCliente = new javax.swing.JButton();
-        btnUsuarios = new javax.swing.JButton();
-        btnFormatos = new javax.swing.JButton();
         btnClientes = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -104,11 +102,13 @@ public class Principal_Admin extends javax.swing.JFrame {
         jMenu8 = new javax.swing.JMenu();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem15 = new javax.swing.JMenuItem();
+        jMenu9 = new javax.swing.JMenu();
+        jMenuItem16 = new javax.swing.JMenuItem();
+        jMenuItem17 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -119,11 +119,11 @@ public class Principal_Admin extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bienvenido.2.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(180, 80, 520, 357);
+        jLabel1.setBounds(180, 100, 520, 357);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 153, 51));
+        jLabel2.setForeground(new java.awt.Color(0, 153, 102));
         jLabel2.setText("Principal");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(490, 20, 220, 50);
@@ -151,46 +151,6 @@ public class Principal_Admin extends javax.swing.JFrame {
         jPanel2.add(btnNuevoCliente);
         btnNuevoCliente.setBounds(20, 120, 100, 77);
 
-        btnUsuarios.setBackground(new java.awt.Color(255, 255, 255));
-        btnUsuarios.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnUsuarios.setForeground(new java.awt.Color(102, 102, 102));
-        btnUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contrato.png"))); // NOI18N
-        btnUsuarios.setText("CONTRATOS");
-        btnUsuarios.setBorder(null);
-        btnUsuarios.setBorderPainted(false);
-        btnUsuarios.setContentAreaFilled(false);
-        btnUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnUsuarios.setIconTextGap(-1);
-        btnUsuarios.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnUsuarios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnUsuarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUsuariosActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnUsuarios);
-        btnUsuarios.setBounds(30, 320, 90, 90);
-
-        btnFormatos.setBackground(new java.awt.Color(255, 255, 255));
-        btnFormatos.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnFormatos.setForeground(new java.awt.Color(102, 102, 102));
-        btnFormatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/coti.png"))); // NOI18N
-        btnFormatos.setText("COTIZACIONES");
-        btnFormatos.setBorder(null);
-        btnFormatos.setBorderPainted(false);
-        btnFormatos.setContentAreaFilled(false);
-        btnFormatos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnFormatos.setIconTextGap(-1);
-        btnFormatos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnFormatos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnFormatos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFormatosActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnFormatos);
-        btnFormatos.setBounds(30, 220, 90, 90);
-
         btnClientes.setBackground(new java.awt.Color(255, 255, 255));
         btnClientes.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnClientes.setForeground(new java.awt.Color(102, 102, 102));
@@ -212,7 +172,7 @@ public class Principal_Admin extends javax.swing.JFrame {
         btnClientes.setBounds(40, 20, 65, 77);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(20, 30, 140, 450);
+        jPanel2.setBounds(20, 30, 140, 230);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 520));
 
@@ -330,9 +290,11 @@ public class Principal_Admin extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("Usuarios");
+        jMenu4.setText("Adjuntos");
 
-        jMenuItem10.setText("Gestionar Usuarios");
+        jMenu3.setText("ENTRADAS");
+
+        jMenuItem10.setText("Adjuntar");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem10ActionPerformed(evt);
@@ -340,20 +302,25 @@ public class Principal_Admin extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem10);
 
-        jMenuBar1.add(jMenu3);
+        jMenuItem15.setText("Gestionar");
+        jMenu3.add(jMenuItem15);
 
-        jMenu4.setText("Adjuntos");
+        jMenu4.add(jMenu3);
 
-        jMenuItem13.setText("Adjuntar");
-        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+        jMenu9.setText("SALIDAS");
+
+        jMenuItem16.setText("Adjuntar");
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem13ActionPerformed(evt);
+                jMenuItem16ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem13);
+        jMenu9.add(jMenuItem16);
 
-        jMenuItem14.setText("Gestionar");
-        jMenu4.add(jMenuItem14);
+        jMenuItem17.setText("Gestionar");
+        jMenu9.add(jMenuItem17);
+
+        jMenu4.add(jMenu9);
 
         jMenuBar1.add(jMenu4);
 
@@ -361,19 +328,6 @@ public class Principal_Admin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnFormatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFormatosActionPerformed
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnFormatosActionPerformed
-
-    private void btnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosActionPerformed
-
-        Contratos obj = new Contratos();
-        obj.setVisible(true);
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUsuariosActionPerformed
 
     private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
 
@@ -480,21 +434,19 @@ public class Principal_Admin extends javax.swing.JFrame {
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
 
-        Usuario obj = new Usuario();
+        Adjuntos obj = new Adjuntos();
         obj.setVisible(true);
         
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
-    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
 
-        /*
-        Adjuntos obj = new Adjuntos();
+        Adjuntos_Salidas obj = new Adjuntos_Salidas();
         obj.setVisible(true);
-        */
         
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem13ActionPerformed
+    }//GEN-LAST:event_jMenuItem16ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -513,30 +465,30 @@ public class Principal_Admin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal_Oper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal_Oper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal_Oper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal_Oper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal_Admin().setVisible(true);
+                new Principal_Oper().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClientes;
-    private javax.swing.JButton btnFormatos;
     private javax.swing.JButton btnNuevoCliente;
-    private javax.swing.JButton btnUsuarios;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
@@ -547,13 +499,15 @@ public class Principal_Admin extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

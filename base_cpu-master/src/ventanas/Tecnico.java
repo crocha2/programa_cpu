@@ -60,14 +60,14 @@ public class Tecnico extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setTitle("CPU System Service S.A.S - PANEL");
-        ListarEntradas();
-        ListarSalidas();
-        ListarEnvios();
-        ListarEntradas_Garantias();
-        ListarGarantiasProceso();
-        ListarPrestamo();
-        ListarListos();
-        ListarEntregados();
+        //ListarEntradas();
+        //ListarSalidas();
+        //ListarEnvios();
+        //ListarEntradas_Garantias();
+        //ListarGarantiasProceso();
+        //ListarPrestamo();
+        //ListarListos();
+        //ListarEntregados();
         colorEstado();
         //autoCompleteEntradas();
         //autoCompleteSalidas();
@@ -1099,7 +1099,7 @@ public class Tecnico extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tbEntradas);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 150, 876, 206);
+        jScrollPane1.setBounds(10, 150, 870, 206);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -1112,7 +1112,7 @@ public class Tecnico extends javax.swing.JFrame {
         jScrollPane4.setViewportView(areaEntrada);
 
         jPanel1.add(jScrollPane4);
-        jScrollPane4.setBounds(430, 70, 459, 72);
+        jScrollPane4.setBounds(429, 70, 450, 72);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
@@ -1191,7 +1191,7 @@ public class Tecnico extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(380, 70, 23, 23);
+        jButton3.setBounds(370, 60, 23, 23);
 
         btnSalida.setBackground(new java.awt.Color(255, 255, 255));
         btnSalida.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1323,7 +1323,7 @@ public class Tecnico extends javax.swing.JFrame {
         jScrollPane5.setViewportView(areaSalida);
 
         jPanel2.add(jScrollPane5);
-        jScrollPane5.setBounds(417, 75, 410, 84);
+        jScrollPane5.setBounds(407, 75, 420, 84);
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -1396,7 +1396,7 @@ public class Tecnico extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Observaciones");
         jPanel2.add(jLabel15);
-        jLabel15.setBounds(417, 54, 87, 15);
+        jLabel15.setBounds(410, 60, 87, 15);
 
         jLabel23.setBackground(new java.awt.Color(255, 255, 255));
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1414,7 +1414,7 @@ public class Tecnico extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton4);
-        jButton4.setBounds(355, 75, 24, 23);
+        jButton4.setBounds(360, 80, 24, 23);
 
         btnSalida3.setBackground(new java.awt.Color(255, 255, 255));
         btnSalida3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1544,7 +1544,7 @@ public class Tecnico extends javax.swing.JFrame {
         jScrollPane6.setViewportView(areaEnvio);
 
         jPanel3.add(jScrollPane6);
-        jScrollPane6.setBounds(433, 79, 367, 84);
+        jScrollPane6.setBounds(410, 79, 390, 84);
 
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -1589,7 +1589,7 @@ public class Tecnico extends javax.swing.JFrame {
                     .addComponent(autoEnvio, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnBusca2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1605,7 +1605,7 @@ public class Tecnico extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel7);
-        jPanel7.setBounds(89, 81, 277, 82);
+        jPanel7.setBounds(89, 81, 260, 82);
 
         jLabel24.setBackground(new java.awt.Color(255, 255, 255));
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1620,7 +1620,7 @@ public class Tecnico extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Comentario");
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(433, 58, 71, 15);
+        jLabel10.setBounds(410, 60, 71, 15);
 
         jButton5.setText("jButton3");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -1629,7 +1629,7 @@ public class Tecnico extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton5);
-        jButton5.setBounds(376, 81, 24, 23);
+        jButton5.setBounds(360, 80, 24, 23);
 
         btnSalida6.setBackground(new java.awt.Color(255, 255, 255));
         btnSalida6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1925,7 +1925,7 @@ public class Tecnico extends javax.swing.JFrame {
             }
         });
         jPanel14.add(jButton6);
-        jButton6.setBounds(355, 75, 24, 23);
+        jButton6.setBounds(360, 80, 24, 23);
 
         jTabbedPane1.addTab("PRESTAMO", jPanel14);
 
@@ -1975,7 +1975,7 @@ public class Tecnico extends javax.swing.JFrame {
         jScrollPane11.setViewportView(tbEntrada_garantia);
 
         jPanel9.add(jScrollPane11);
-        jScrollPane11.setBounds(39, 155, 809, 236);
+        jScrollPane11.setBounds(40, 150, 809, 236);
 
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -2174,20 +2174,16 @@ public class Tecnico extends javax.swing.JFrame {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jLabel25)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel25)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(autoProceso)
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(cmbProceso, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 107, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnBusca3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57))))
+                            .addComponent(cmbProceso, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(autoProceso, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBusca3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2207,7 +2203,7 @@ public class Tecnico extends javax.swing.JFrame {
         );
 
         jPanel4.add(jPanel8);
-        jPanel8.setBounds(493, 62, 377, 104);
+        jPanel8.setBounds(480, 60, 380, 104);
 
         actualizar.setText("jButton2");
         actualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -2334,10 +2330,10 @@ public class Tecnico extends javax.swing.JFrame {
             }
         });
         jPanel16.add(btnBusca6);
-        btnBusca6.setBounds(0, 0, 70, 50);
+        btnBusca6.setBounds(0, 10, 70, 40);
 
         jPanel4.add(jPanel16);
-        jPanel16.setBounds(490, 170, 70, 50);
+        jPanel16.setBounds(480, 170, 70, 50);
 
         jPanel21.setBackground(new java.awt.Color(255, 255, 255));
         jPanel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -2361,10 +2357,10 @@ public class Tecnico extends javax.swing.JFrame {
             }
         });
         jPanel21.add(btnBusca11);
-        btnBusca11.setBounds(0, 0, 70, 50);
+        btnBusca11.setBounds(0, 10, 70, 40);
 
         jPanel4.add(jPanel21);
-        jPanel21.setBounds(570, 170, 70, 50);
+        jPanel21.setBounds(560, 170, 70, 50);
 
         jTabbedPane3.addTab("PROCESO", jPanel4);
 
@@ -2382,7 +2378,7 @@ public class Tecnico extends javax.swing.JFrame {
         jScrollPane9.setViewportView(areaListo);
 
         jPanel11.add(jScrollPane9);
-        jScrollPane9.setBounds(408, 70, 430, 80);
+        jScrollPane9.setBounds(418, 70, 420, 80);
 
         jScrollPane10.setAutoscrolls(true);
 
@@ -2510,7 +2506,7 @@ public class Tecnico extends javax.swing.JFrame {
         btnBusca9.setBounds(0, 0, 88, 50);
 
         jPanel11.add(jPanel20);
-        jPanel20.setBounds(410, 160, 90, 50);
+        jPanel20.setBounds(450, 160, 90, 50);
 
         jPanel22.setBackground(new java.awt.Color(255, 255, 255));
         jPanel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -2534,10 +2530,10 @@ public class Tecnico extends javax.swing.JFrame {
             }
         });
         jPanel22.add(btnBusca10);
-        btnBusca10.setBounds(0, 10, 88, 40);
+        btnBusca10.setBounds(0, 0, 88, 50);
 
         jPanel11.add(jPanel22);
-        jPanel22.setBounds(510, 160, 90, 50);
+        jPanel22.setBounds(550, 160, 90, 50);
 
         jTabbedPane3.addTab("LISTO", jPanel11);
 
@@ -2555,7 +2551,7 @@ public class Tecnico extends javax.swing.JFrame {
         jScrollPane13.setViewportView(areaEntregados);
 
         jPanel18.add(jScrollPane13);
-        jScrollPane13.setBounds(380, 70, 458, 70);
+        jScrollPane13.setBounds(390, 70, 470, 70);
 
         jScrollPane14.setAutoscrolls(true);
 
@@ -2683,7 +2679,7 @@ public class Tecnico extends javax.swing.JFrame {
         btnBusca12.setBounds(0, 0, 88, 50);
 
         jPanel18.add(jPanel23);
-        jPanel23.setBounds(380, 150, 90, 50);
+        jPanel23.setBounds(390, 150, 90, 50);
 
         jTabbedPane3.addTab("ENTREGADOS", jPanel18);
 
@@ -4407,6 +4403,10 @@ public class Tecnico extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbHistorial2ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+
+        LimpiarEntregados();
+        ListarEntregados();
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton11ActionPerformed
 

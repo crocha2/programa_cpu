@@ -7,7 +7,9 @@ package ventanas;
 
 import clasesPrincipales.Entradas;
 import clasesPrincipales.imagen;
+import conMySql.conector;
 import conMySql.entradaMySql;
+import java.awt.HeadlessException;
 import java.awt.Image;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -18,10 +20,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import reportes.GenerarReportes;
 
 /**
  *
@@ -49,7 +54,7 @@ public class Adjuntos extends javax.swing.JFrame {
         txtFecha.setEnabled(false);
         txtModelo.setEnabled(false);
         txtSerie.setEnabled(false);
-        
+
         btnSeleccionar.setVisible(false);
         btnGuardar.setVisible(false);
         lblFoto.setVisible(false);
@@ -73,18 +78,40 @@ public class Adjuntos extends javax.swing.JFrame {
         txtFecha.setText("");
         txtModelo.setText("");
         txtSerie.setText("");
-        lblFoto.setText("");
+        lblFoto.setText(null);
         btnSeleccionar.setVisible(false);
         btnGuardar.setVisible(false);
         lblFoto.setVisible(false);
     }
-    
+
     public void habilitar() {
         btnSeleccionar.setVisible(true);
         btnGuardar.setVisible(true);
         lblFoto.setVisible(true);
     }
-    
+
+    public boolean validarImagen(int id) throws SQLException {
+        boolean respuesta = false;
+        conector obj = new conector();
+
+        imagen ima = new imagen();
+        //Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
+        PreparedStatement pst = obj.con.prepareStatement("Select id_entra From imagenes Where id_entra = ?");
+        pst.setInt(1, ima.getId_entra());
+        ResultSet rs = pst.executeQuery();
+        if (rs.next()) {
+
+            int id_en = rs.getInt("id_entra");
+            int id_entrada = id;
+            if (id_en == id_entrada) {
+                respuesta = true;
+            } else {
+                respuesta = false;
+            }
+            //boolean res = respuesta;
+        }
+        return respuesta;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -114,6 +141,7 @@ public class Adjuntos extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         lblFoto = new javax.swing.JLabel();
         btnSeleccionar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -232,6 +260,16 @@ public class Adjuntos extends javax.swing.JFrame {
         jPanel2.add(btnSeleccionar);
         btnSeleccionar.setBounds(300, 260, 120, 30);
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setText("GENERAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1);
+        jButton1.setBounds(303, 463, 120, 40);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -273,7 +311,7 @@ public class Adjuntos extends javax.swing.JFrame {
                 txtCliente.setText(rs.getString("empresa").trim());
                 txtModelo.setText(rs.getString("modelo").trim());
                 txtSerie.setText(rs.getString("serie").trim());
-                txtIdEntrada.setText(rs.getString("id_cli"));
+                txtIdEntrada.setText(rs.getString("id_entra"));
                 habilitar();
 
                 //pst.setString(1, CMBID.getName());
@@ -293,23 +331,47 @@ public class Adjuntos extends javax.swing.JFrame {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
 
         if (txtIdEntrada.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Debes seleccionar un registro ENTRADAS");
-        } else {
-            try {
-                imagen ima = new imagen(this.fis, this.longitudBytes,Integer.parseInt(txtIdEntrada.getText()));
-                //ima.setImagen(this.fis);
-                //ima.setImagen(this.longitudBytes);
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un registro");
+        }
+        try {
+            boolean respuesta = false;
+            conector obj = new conector();
+            imagen ima = new imagen();
+            PreparedStatement pst = obj.con.prepareStatement("Select id_entra From imagenes Where id_entra = ?");
+            pst.setInt(1, ima.getId_entra());
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
 
-                dbEntrada.adjuntarImagenUPDATE(ima);
-                JOptionPane.showMessageDialog(this, "Ingresado exitosamente");
-                limpiar();
-
-            } catch (Exception e) {
-                System.err.println("error" + e);
+                int id_en = rs.getInt("id_entra");
+                int id_entrada = Integer.parseInt(txtIdEntrada.getText());
+                if (id_en == id_entrada) {
+                    respuesta = true;
+                } else {
+                    respuesta = false;
+                }
+                //boolean res = respuesta;
             }
+        } catch (SQLException | NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "error" + e.getMessage());
+        }
+        try {
+            imagen ima = new imagen(this.fis, this.longitudBytes, Integer.parseInt(txtIdEntrada.getText()));
+                // imagen ima = new imagen(this.fis, this.longitudBytes, Integer.parseInt(txtIdEntrada.getText()));
+            //ima.setNombre(this.txtNombreImagen.getText());
+            //ima.setImagen(this.fis);
+            //ima.setImagen(this.longitudBytes);
+
+            dbEntrada.adjuntarImagenINSERT(ima);
+
+            limpiar();
+            lblFoto.setText(null);
+
+        } catch (NumberFormatException | HeadlessException e) {
+            JOptionPane.showMessageDialog(this, "error" + e.getMessage());
         }
 
-        // TODO add your handling code here:
+            //Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
+
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void lblFotoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblFotoMouseClicked
@@ -331,7 +393,7 @@ public class Adjuntos extends javax.swing.JFrame {
                     fis = new FileInputStream(se.getSelectedFile());
                     this.longitudBytes = (int) se.getSelectedFile().length();
 
-                //Dimenciona la imagen a la dimencion del label "lblFoto"
+                    //Dimenciona la imagen a la dimencion del label "lblFoto"
                 /*
                      Image icono = ImageIO.read(se.getSelectedFile()).getScaledInstance(lblFoto.getWidth(), lblFoto.getHeight(), Image.SCALE_DEFAULT);
                      lblFoto.setIcon(new ImageIcon(icono));
@@ -349,6 +411,20 @@ public class Adjuntos extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSeleccionarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        if (txtIdEntrada.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un registro");
+        } else {
+            String nume = txtIdEntrada.getText();
+            int id = Integer.parseInt(nume);
+            GenerarReportes g = new GenerarReportes();
+            g.reporteIMAGEN(id);
+        }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -390,6 +466,7 @@ public class Adjuntos extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnSeleccionar;
     private javax.swing.JComboBox cmbEntradas;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;

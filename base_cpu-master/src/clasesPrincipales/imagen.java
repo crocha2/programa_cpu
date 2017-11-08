@@ -19,6 +19,7 @@ public class imagen {
     FileInputStream imagen;
     int longitud;
     int id_entra;
+    int id_salida;
 
     public imagen(int id_imagen, FileInputStream imagen, int longitud) {
         this.id_imagen = id_imagen;
@@ -32,10 +33,11 @@ public class imagen {
     }
 
     public imagen(FileInputStream imagen, int longitud, int id_entra) {
-        this.id_entra = id_entra;
         this.imagen = imagen;
         this.longitud = longitud;
+        this.id_entra = id_entra;
     }
+ 
 
     public int getId_entra() {
         return id_entra;
