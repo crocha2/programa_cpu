@@ -9,8 +9,10 @@ import clasesPrincipales.Entradas;
 import clasesPrincipales.Salidas;
 import clasesPrincipales.imagen;
 import clasesPrincipales.imagen_salida;
+import conMySql.conector;
 import conMySql.entradaMySql;
 import conMySql.salidaMySql;
+import java.awt.HeadlessException;
 import java.awt.Image;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -308,27 +310,51 @@ public class Adjuntos_Salidas extends javax.swing.JFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
 
-        if (txtIdSalida.getText().isEmpty()){
+        if (txtIdSalida.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Debe seleccionar un registro");
-        }else{
-            try {
-            imagen_salida ima = new imagen_salida(this.fis, this.longitudBytes, Integer.parseInt(txtIdSalida.getText()));
-            //ima.setNombre(this.txtNombreImagen.getText());
-            //ima.setImagen(this.fis);
-            //ima.setImagen(this.longitudBytes);
-
-            dbsalida.adjuntarImagenINSERT(ima);
-            JOptionPane.showMessageDialog(this, "Ingresado exitosamente");
-            
-            limpiar();
-            lblFoto.setText(null);
-            
-
-        } catch (Exception e) {
-            System.err.println("error" + e);
         }
+        try {
+            boolean respuesta = false;
+            conector obj = new conector();
+            //imagen ima = new imagen();
+            int id = Integer.parseInt(txtIdSalida.getText());
+            PreparedStatement pst = obj.con.prepareStatement("Select id_salida From imagenes Where id_salida = ?");
+            pst.setInt(1, id);
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+
+                int id_en_db = rs.getInt("id_salida");
+                //int id_entrada = Integer.parseInt(txtIdEntrada.getText());
+                if (id_en_db == id) {
+                    respuesta = true;
+                } else {
+                    respuesta = false;
+                }
+                //boolean res = respuesta;
+                if (respuesta == true) {
+                    JOptionPane.showMessageDialog(this, "Este registro ya tiene imagen asignada");
+                } else {
+                    try {
+                        imagen_salida ima = new imagen_salida(this.cmbSalidas.getSelectedItem().toString(), this.fis, this.longitudBytes, Integer.parseInt(txtIdSalida.getText()));
+            // imagen ima = new imagen(this.fis, this.longitudBytes, Integer.parseInt(txtIdEntrada.getText()));
+                        //ima.setNombre(this.txtNombreImagen.getText());
+                        //ima.setImagen(this.fis);
+                        //ima.setImagen(this.longitudBytes);
+
+                        dbsalida.adjuntarImagenINSERT(ima);
+
+                        limpiar();
+                        lblFoto.setText(null);
+
+                    } catch (NumberFormatException | HeadlessException e) {
+                        JOptionPane.showMessageDialog(this, "error" + e.getMessage());
+                    }
+                }
+            }
+
+        } catch (SQLException | NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "error" + e.getMessage());
         }
-        
         
         /*
         if (txtIdEntrada.getText().isEmpty()) {

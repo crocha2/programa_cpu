@@ -336,37 +336,43 @@ public class Adjuntos extends javax.swing.JFrame {
         try {
             boolean respuesta = false;
             conector obj = new conector();
-            imagen ima = new imagen();
+            //imagen ima = new imagen();
+            int id = Integer.parseInt(txtIdEntrada.getText());
             PreparedStatement pst = obj.con.prepareStatement("Select id_entra From imagenes Where id_entra = ?");
-            pst.setInt(1, ima.getId_entra());
+            pst.setInt(1, id);
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
 
-                int id_en = rs.getInt("id_entra");
-                int id_entrada = Integer.parseInt(txtIdEntrada.getText());
-                if (id_en == id_entrada) {
+                int id_en_db = rs.getInt("id_entra");
+                //int id_entrada = Integer.parseInt(txtIdEntrada.getText());
+                if (id_en_db == id) {
                     respuesta = true;
                 } else {
                     respuesta = false;
                 }
                 //boolean res = respuesta;
+                if (respuesta == true) {
+                    JOptionPane.showMessageDialog(this, "Este registro ya tiene imagen asignada");
+                } else {
+                    try {
+                        imagen ima = new imagen(this.cmbEntradas.getSelectedItem().toString(), this.fis, this.longitudBytes, Integer.parseInt(txtIdEntrada.getText()));
+            // imagen ima = new imagen(this.fis, this.longitudBytes, Integer.parseInt(txtIdEntrada.getText()));
+                        //ima.setNombre(this.txtNombreImagen.getText());
+                        //ima.setImagen(this.fis);
+                        //ima.setImagen(this.longitudBytes);
+
+                        dbEntrada.adjuntarImagenINSERT(ima);
+
+                        limpiar();
+                        lblFoto.setText(null);
+
+                    } catch (NumberFormatException | HeadlessException e) {
+                        JOptionPane.showMessageDialog(this, "error" + e.getMessage());
+                    }
+                }
             }
+
         } catch (SQLException | NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "error" + e.getMessage());
-        }
-        try {
-            imagen ima = new imagen(this.fis, this.longitudBytes, Integer.parseInt(txtIdEntrada.getText()));
-                // imagen ima = new imagen(this.fis, this.longitudBytes, Integer.parseInt(txtIdEntrada.getText()));
-            //ima.setNombre(this.txtNombreImagen.getText());
-            //ima.setImagen(this.fis);
-            //ima.setImagen(this.longitudBytes);
-
-            dbEntrada.adjuntarImagenINSERT(ima);
-
-            limpiar();
-            lblFoto.setText(null);
-
-        } catch (NumberFormatException | HeadlessException e) {
             JOptionPane.showMessageDialog(this, "error" + e.getMessage());
         }
 

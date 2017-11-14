@@ -15,7 +15,7 @@ import java.io.InputStream;
 public class imagen {
     
     int id_imagen;
-    String nombre;
+    String numero;
     FileInputStream imagen;
     int longitud;
     int id_entra;
@@ -32,12 +32,20 @@ public class imagen {
         this.longitud = longitud;
     }
 
-    public imagen(FileInputStream imagen, int longitud, int id_entra) {
+    public imagen(String numero, FileInputStream imagen, int longitud, int id_entra) {
+        this.numero = numero;
         this.imagen = imagen;
         this.longitud = longitud;
         this.id_entra = id_entra;
     }
- 
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
 
     public int getId_entra() {
         return id_entra;
@@ -66,13 +74,7 @@ public class imagen {
         this.id_imagen = id_imagen;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public FileInputStream getImagen() {
         return imagen;

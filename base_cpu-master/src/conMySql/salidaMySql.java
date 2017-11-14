@@ -221,9 +221,10 @@ public class salidaMySql {
     public void adjuntarImagenINSERT(imagen_salida img) {
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
-            PreparedStatement pst = cn.prepareStatement("INSERT INTO imagenes_salidas (imagen, id_salida) VALUES (?,?)");
-            pst.setBlob(1, img.getImagen(), img.getLongitud());
-            pst.setInt(2, img.getId_salida());
+            PreparedStatement pst = cn.prepareStatement("INSERT INTO imagenes_salidas (numero, imagen, id_salida) VALUES (?,?,?)");
+            pst.setString(1, img.getNumero());
+            pst.setBlob(2, img.getImagen(), img.getLongitud());
+            pst.setInt(3, img.getId_salida());
             //pst.setInt(3, img.getLongitud());
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Guardado exitosamente");

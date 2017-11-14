@@ -103,10 +103,10 @@ public class entradaMySql {
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
             Statement st = cn.createStatement();
-            ResultSet rs = st.executeQuery("SELECT nombre, image FROM imagen ORDER BY 1");
+            ResultSet rs = st.executeQuery("SELECT * FROM imagen ORDER BY 1");
             while (rs.next()) {
                 imagen im = new imagen();
-                im.setNombre(rs.getString("nombre"));
+                im.setNumero(rs.getString("numero"));
                 //im.setImagen(rs.String("fecha"));
                 ima.add(im);
             }
@@ -258,9 +258,10 @@ public class entradaMySql {
     public void adjuntarImagenINSERT(imagen img) {
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://69.73.129.251:3306/cpusysc1_cpudb", "cpusysc1_root", "c8020123496");
-            PreparedStatement pst = cn.prepareStatement("INSERT INTO imagenes (imagen, id_entra) VALUES (?,?)");
-            pst.setBlob(1, img.getImagen(), img.getLongitud());
-            pst.setInt(2, img.getId_entra());
+            PreparedStatement pst = cn.prepareStatement("INSERT INTO imagenes (numero, imagen, id_entra) VALUES (?,?,?)");
+            pst.setString(1, img.getNumero());
+            pst.setBlob(2, img.getImagen(), img.getLongitud());
+            pst.setInt(3, img.getId_entra());
             //pst.setInt(3, img.getLongitud());
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Guardado exitosamente");
